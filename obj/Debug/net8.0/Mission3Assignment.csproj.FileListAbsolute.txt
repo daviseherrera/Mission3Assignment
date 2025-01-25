@@ -12,3 +12,4 @@
 /Users/davisherrera/RiderProjects/Mission3Assignment/obj/Debug/net8.0/Mission3Assignment.pdb
 /Users/davisherrera/RiderProjects/Mission3Assignment/obj/Debug/net8.0/Mission3Assignment.genruntimeconfig.cache
 /Users/davisherrera/RiderProjects/Mission3Assignment/obj/Debug/net8.0/ref/Mission3Assignment.dll
+/Users/davisherrera/RiderProjects/Mission3Assignment/obj/Debug/net8.0/Mission3Assignment.sourcelink.json
