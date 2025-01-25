@@ -86,18 +86,21 @@ do
     }
     else if (userInput == "2")
     {
+        // If no items inputted, send message
         if (foodItems.Count == 0)
         {
             Console.WriteLine("No food items available to delete.");
         }
         else
         {
+            // Print out a list of food items so user can decide which to delete
             Console.WriteLine("Here are the current food items:");
             for (int i = 0; i < foodItems.Count; i++)
             {
                 Console.WriteLine($"{i + 1}. {foodItems[i].Name} - {foodItems[i].Category} (Qty: {foodItems[i].Quantity}, Expiration: {foodItems[i].ExpirationDate.ToShortDateString()})");
             }
-
+            
+            // Making sure that the user selects a food item to delete that is in the range of food items displayed
             int itemToDelete;
             while (true)
             {
@@ -117,13 +120,15 @@ do
             // Confirm deletion
             Console.WriteLine($"Are you sure you want to delete '{foodItems[itemToDelete - 1].Name}'? (yes/no): ");
             string confirm = Console.ReadLine().ToLower();
-
+            
+            // Handles if user types anything but yes or no.
             while (confirm != "yes" && confirm != "no")
             {
                 Console.WriteLine("Invalid input. Please enter 'yes' or 'no': ");
                 confirm = Console.ReadLine().ToLower();
             }
-
+            
+            // Delete the item that the user chose and send message or cancel deletion
             if (confirm == "yes")
             {
                 foodItems.RemoveAt(itemToDelete - 1);
@@ -137,7 +142,7 @@ do
     }
     else if (userInput == "3")
     {
-        // Print current list of food items
+        // Print current list of food items. If no food items, print out message
         if (foodItems.Count == 0)
         {
             Console.WriteLine("No food items found.");
@@ -151,6 +156,8 @@ do
             }
         }
     }
+    
+    // Exits the program if 4 is inputted. Anything other than 1-4 sends an error and prompts user again
     else if (userInput == "4")
     {
         Console.WriteLine("You have exited the program. Have a nice day!");
